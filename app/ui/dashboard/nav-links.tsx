@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  UserIcon,
   SparklesIcon,
   BuildingStorefrontIcon,
 } from '@heroicons/react/24/outline';
@@ -21,7 +20,8 @@ export default function NavLinks() {
     <>
       {links.map((link) => {
         const LinkIcon = link.icon;
-        const isSelected = pathname === link.href;
+        const isSelected = pathname.includes(link.href);
+        
         return (
           <Link
             key={link.name}
@@ -30,7 +30,7 @@ export default function NavLinks() {
               'flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm md:flex-none md:justify-start md:p-2 md:px-3',
               {
                 'bg-blue-800 text-white': isSelected,
-                'bg-gray-900 text-white hover:bg-gray-800': !isSelected, // 선택 안 됐을 때 기본 색
+                'bg-gray-900 text-white hover:bg-gray-800': !isSelected,
               },
             )}
           >
