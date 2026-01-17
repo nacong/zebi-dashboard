@@ -14,6 +14,7 @@ export async function login(prevStoreState: string | undefined, formData: FormDa
   try {
     await signIn('credentials', formData);
   } catch (error) {
+    console.log(error)
     if (error instanceof AuthError) {
       switch (error.type) {
         case 'CredentialsSignin':
@@ -24,9 +25,6 @@ export async function login(prevStoreState: string | undefined, formData: FormDa
     }
     throw error;
   }
-
-  // 2. 대시보드로 이동해요.
-  redirect('/dashboard');
 }
 
 export async function createStore(store: StoreCreate): Promise<StoreState> {
