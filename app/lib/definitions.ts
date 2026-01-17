@@ -17,6 +17,13 @@ export const CATEGORY_LIST = [
   '그외',
 ] as const;
 
+export type User = {
+  id: string;
+  name: string;
+  image: string;
+  code: string;
+};
+
 export type Category = (typeof CATEGORY_LIST)[number];
 
 export const StoreSchema = z.object({
