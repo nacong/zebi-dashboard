@@ -1,5 +1,5 @@
-import Form from '@/app/ui/stores/edit-form';
-import Breadcrumbs from '@/app/ui/stores/breadcrumbs';
+import Form from '@/app/ui/dashboard/stores/edit-form';
+import Breadcrumbs from '@/app/ui/dashboard/breadcrumbs';
 import { notFound } from 'next/navigation';
 import { fetchStoreById } from '@/app/lib/data';
  
@@ -16,15 +16,15 @@ export default async function Page(props: { params: Promise<{id : string}>}) {
     <main>
       <Breadcrumbs
         breadcrumbs={[
-          { label: 'Stores', href: '/dashboard/stores' },
+          { label: '가게', href: '/dashboard/stores' },
           {
-            label: 'Edit Store',
+            label: '가게 수정',
             href: `/dashboard/stores/${id}/edit`,
             active: true,
           },
         ]}
       />
-      <Form store={store} />
+      <Form defaultStore={store} />
     </main>
   );
 }

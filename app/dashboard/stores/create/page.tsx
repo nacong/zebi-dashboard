@@ -1,21 +1,21 @@
-import Form from '@/app/ui/stores/create-form';
-import Breadcrumbs from '@/app/ui/stores/breadcrumbs';
+import Form from '@/app/ui/dashboard/stores/create-form';
+import Breadcrumbs from '@/app/ui/dashboard/breadcrumbs';
  
 export default function Page() {
  
   return (
-    <main>
+    <>
       <Breadcrumbs
         breadcrumbs={[
-          { label: 'Stores', href: '/dashboard/stores' },
+          { label: '가게', href: '/dashboard/stores' },
           {
-            label: 'Create Store',
+            label: '새로 만들기',
             href: '/dashboard/stores/create',
             active: true,
           },
         ]}
       />
       <Form />
-    </main>
+    </>
   );
 }
