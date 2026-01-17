@@ -1,7 +1,6 @@
 import "@/app/ui/globals.css";
 import type { Metadata } from "next";
 import { notoSansKR } from "@/app/ui/fonts";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "제비 대시보드",
