@@ -17,14 +17,15 @@ export const authConfig = {
         return true;
       }
     },
-    jwt({ token, user, account, profile }) {
-      if (profile) {
+    jwt({ token, user }) {
+      if (user) {
         token.id = user.id;
       }
       return token;
     },
-    session({ session, token, user }) {
+    session({ session, token }) {
       session.user.id = token.id as string;
+
       return session;
     },
   },
