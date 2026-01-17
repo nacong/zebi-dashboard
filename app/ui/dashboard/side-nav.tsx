@@ -7,14 +7,13 @@ import Profile from './profile';
 
 export default function SideNav() {
   return (
-    <div className="flex h-full flex-col px-3 py-4 md:px-2 bg-black text-white">
-      <Link
-        className="mb-2 rounded-md bg-gray-900 p-4"
-        href="/"
-      >
-        <h1 className="text-xl font-bold">제비 대시보드</h1>
-      </Link>
+    <div className="flex h-full flex-col px-3 py-4 md:px-2">
       <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
+        <Link
+          className="mb-2 rounded-md bg-gray-900 p-4"
+          href="/">
+          <h1 className="text-xl font-bold">제비 대시보드</h1>
+        </Link>
         <Profile />
         <NavLinks />
         <div className="hidden h-auto w-full grow rounded-md bg-gray-900 md:block"></div>
