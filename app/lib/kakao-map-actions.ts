@@ -15,6 +15,7 @@ export async function searchPlaceByKeyword(keyword: string): Promise<{ place_nam
 
   const firstPlace = result.documents[0];
   firstPlace.category = CATEGORY_LIST.find(c => firstPlace.category_name.includes(c));
+  firstPlace.place_url = firstPlace.place_url + "#menuInfo"
 
   return firstPlace;
 } 
