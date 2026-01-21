@@ -49,7 +49,7 @@ export default async function PartnershipsTable({
               {partnerships?.map((partnership) => (
                 <tr
                   key={partnership.id}
-                  className="border-b text-sm last:border-none"
+                  className="border-b border-gray-900 text-sm last:border-none"
                 >
                   <td className="rounded-l-lg py-3 pl-6 pr-3">{partnership.store_name}</td>
                   <td className="px-3 py-3">{partnership.emoji}</td>
