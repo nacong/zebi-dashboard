@@ -29,7 +29,14 @@ export type Category = (typeof CATEGORY_LIST)[number];
 export const StoreSchema = z.object({
   name: z.string().min(1, '매장명을 입력해 주세요.'),
   category: z.enum(CATEGORY_LIST),
-  url: z.url(),
+  url: z
+    .url()
+    .transform((v) => {
+      if (v.startsWith("http://")) {
+        return v.replace("http://", "https://");
+      }
+      return v;
+    }),
   lat: z.coerce.number(),
   lon: z.coerce.number(),
 });
