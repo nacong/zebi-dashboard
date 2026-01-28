@@ -47,7 +47,7 @@ export default function PartnershipForm({
         {/* 이모지 */}
         <div className="mb-4">
           <label htmlFor="emoji" className="mb-2 block text-sm font-medium">
-            이모지
+            이모지 (실제로는 <a href="https://toss.im/tossface/all#음식" className="underline">토스이모지</a>로 보여져요)
           </label>
           <input
             id="emoji"
